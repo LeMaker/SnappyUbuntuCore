@@ -1,15 +1,15 @@
 include common.mk
 
 SNAPPY_VERSION := `date +%Y%m%d`-0
-SNAPPY_IMAGE := uc16-roseapple-pi-${SNAPPY_VERSION}.img
+SNAPPY_IMAGE := uc16-lemaker-guitar-${SNAPPY_VERSION}.img
 # yes for latest version; no for the specific revision of edge/stable channel
 SNAPPY_CORE_NEW := yes
 SNAPPY_CORE_VER ?=
 SNAPPY_CORE_CH := stable
 GADGET_VERSION := `cat gadget/meta/snap.yaml | grep version: | awk '{print $$2}'`
-GADGET_SNAP := roseapple-pi_$(GADGET_VERSION)_armhf.snap
+GADGET_SNAP := lemaker-guitar_$(GADGET_VERSION)_armhf.snap
 KERNEL_SNAP_VERSION := `cat $(KERNEL_SRC)/prime/meta/snap.yaml | grep version: | awk '{print $$2}'`
-KERNEL_SNAP := roseapple-pi-kernel_$(KERNEL_SNAP_VERSION)_armhf.snap
+KERNEL_SNAP := lemaker-guitar-kernel_$(KERNEL_SNAP_VERSION)_armhf.snap
 REVISION ?=
 SNAPPY_WORKAROUND := no
 SNAP_UBUNTU_IMAGE=/snap/bin/ubuntu-image
@@ -35,7 +35,7 @@ endif
 		--extra-snaps $(GADGET_SNAP) \
 		--extra-snaps $(KERNEL_SNAP) \
 		-o $(SNAPPY_IMAGE) \
-		roseapple.model
+		lemaker-guitar.model
 
 fix-bootflag:
 	sudo dd conv=notrunc if=boot_fix.bin of=$(SNAPPY_IMAGE) seek=440 oflag=seek_bytes

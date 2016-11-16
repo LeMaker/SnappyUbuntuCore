@@ -13,20 +13,20 @@ OEM_BOOT_DIR := $(OUTPUT_DIR)/gadget
 TOOLCHAIN := DEB
 
 ARCH := arm
-KERNEL_DTS := actduino_bubble_gum_sdboot_linux
-KERNEL_DEFCONFIG := snappy-actduino_bubble_gum_linux_defconfig
-UBOOT_DEFCONFIG := actduino_bubble_gum_v10_defconfig
+KERNEL_DTS := lemaker_guitar_bbb
+KERNEL_DEFCONFIG := atm705a_s500_defconfig
+UBOOT_DEFCONFIG := s500_defconfig
 
-KERNEL_REPO := https://github.com/xapp-le/kernel.git
-KERNEL_BRANCH := Ubuntu-Snappy-Core
+KERNEL_REPO := https://github.com/LeMaker/linux-actions.git
+KERNEL_BRANCH := linux-3.10.y-snappy
 KERNEL_SRC := $(PWD)/kernel
 KERNEL_MODULES := $(PWD)/kernel-build
 KERNEL_OUT := $(PWD)/kernel-build
 KERNEL_UIMAGE := $(KERNEL_OUT)/arch/arm/boot/zImage
 KERNEL_DTB := $(KERNEL_OUT)/arch/arm/boot/dts/$(KERNEL_DTS).dtb
 
-UBOOT_REPO := https://github.com/xapp-le/u-boot.git
-UBOOT_BRANCH := Ubuntu-Snappy-Core
+UBOOT_REPO := https://github.com/LeMaker/u-boot-actions.git
+UBOOT_BRANCH := s500-snappy
 UBOOT_SRC := $(PWD)/u-boot
 UBOOT_OUT := $(PWD)/u-boot-build
 UBOOT_BIN := $(UBOOT_OUT)/u-boot-dtb.img

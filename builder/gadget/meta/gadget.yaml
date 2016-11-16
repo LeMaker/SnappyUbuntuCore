@@ -1,6 +1,6 @@
-device-tree: actduino_bubble_gum_sdboot_linux.dtb
+device-tree: lemaker_guitar_bbb.dtb
 volumes:
-  roseapple-pi:
+  lemaker-guitar:
     schema: mbr
     bootloader: u-boot
     structure:

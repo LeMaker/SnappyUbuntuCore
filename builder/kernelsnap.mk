@@ -1,12 +1,12 @@
 include common.mk
 
 KERNEL_SNAP_VERSION := `cat $(KERNEL_SRC)/prime/meta/snap.yaml | grep version: | awk '{print $$2}'`
-KERNEL_SNAP := roseapple-pi-kernel_$(KERNEL_SNAP_VERSION)_armhf.snap
+KERNEL_SNAP := lemaker-guitar-kernel_$(KERNEL_SNAP_VERSION)_armhf.snap
 
 all: build
 
 clean:
-	rm -f roseapple-pi-kernel*.snap
+	rm -f lemaker-guitar-kernel*.snap
 	if [ -d $(KERNEL_SRC) ] ; then cd $(KERNEL_SRC); snapcraft clean; fi
 
 distclean: clean

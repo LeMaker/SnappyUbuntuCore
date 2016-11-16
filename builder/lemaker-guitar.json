@@ -1,0 +1,11 @@
+{
+  "type": "model",
+  "authority-id": "aSHCOot4Vegwy3WDq3PYDfA6YjWMY7vM",
+  "brand-id": "aSHCOot4Vegwy3WDq3PYDfA6YjWMY7vM",
+  "series": "16",
+  "model": "lemaker-guitar",
+  "architecture": "armhf",
+  "gadget": "lemaker-guitar",
+  "kernel": "lemaker-guitar-kernel",
+  "timestamp": "2016-11-16T16:09:20+00:00"
+}

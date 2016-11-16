@@ -1,8 +1,8 @@
-name: roseapple-pi
+name: lemaker-guitar
 version: 16.04-1.1
-summary: Roseapple Pi support package
+summary: LeMaker Guitar board support package
 description: |
- Support files for booting Roseapple Pi
+ Support files for booting the LeMaker Guitar board
 type: gadget
 architectures:
     - armhf
