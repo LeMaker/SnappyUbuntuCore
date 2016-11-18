@@ -3,7 +3,7 @@ Develop LeMaker Guitar to Snappy 16 [Snappy Ubuntu Core](http://developer.ubuntu
 
 ## Structure
 builder: build Snappy via makefiles, and that includes Gadget snap and Kernel snap.  
-prebuild: prebuild iamge for test purpose.
+pre-built: pre-build image download link for test purpose.
 
 ## Requirements
 Make sure your build environment is based on `Ubuntu 16.04` or later. Then, you need to install snappy tools, for creating image.
