@@ -1,3 +1,9 @@
+CONFILE=.config
+
+ifeq ($(strip $(wildcard ${CONFILE})),)
+  $(error "$(CONFILE)": No such file, Please run command "./configure" first)
+endif
+
 BUILD_STEPS := u-boot gadget kernelsnap snappy
 
 all: build
@@ -23,6 +29,7 @@ $(foreach step,$(BUILD_STEPS),$(eval $(call BUILD_STEPS_TEMPLATE,$(step))))
 build: $(addprefix build-,$(BUILD_STEPS))
 
 clean: $(addprefix clean-,$(BUILD_STEPS))
+	@rm -rf $(CONFILE) 
 
 distclean: $(addprefix distclean-,$(BUILD_STEPS))
 

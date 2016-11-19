@@ -37,7 +37,13 @@ Build an image by fetching essential snaps from Ubuntu store
 ## Build from scratch
 A `Makefile` is provided to build Snappy, Gadget snap, U-Boot, Kernel snap from source. The sources will be cloned into local folders if not there already.
 
-To build it all, just run `make snappy`. This will produce a Snappy image, a gadget snap `lemaker-guitar_x.y_all.snap` and a kernel snap `lemaker-guitar-kernel_x.y.z.snap` for device part, which can be used to build your own Snappy image.
+To build it all, just run the commands below:
+```bash
+cd builder/
+./configure #Configure board type
+make snappy
+```
+This will produce a Snappy image, a gadget snap `lemaker-guitar_x.y_all.snap` and a kernel snap `lemaker-guitar-kernel_x.y.z.snap` for device part, which can be used to build your own Snappy image.
 
 ### Custom Image
 If you want to build the speical version with including the snap you'd like to install from ubuntu store, you can modify the snappy.mk to reach it. For example:  

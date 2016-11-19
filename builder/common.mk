@@ -3,19 +3,14 @@ CPUS := $(shell getconf _NPROCESSORS_ONLN)
 include .config 
 
 OUTPUT_DIR := $(PWD)
-SCRIPT_DIR := $(OUTPUT_DIR)/scripts
-TOOLS_DIR := $(OUTPUT_DIR)/tools
-PRELOAD_DIR := $(OUTPUT_DIR)/preloader
+OWL_DIR := $(PWD)/owl-actions
+SCRIPT_DIR := $(OWL_DIR)/scripts
+TOOLS_DIR := $(OWL_DIR)/tools
 CONFIG_DIR := $(OUTPUT_DIR)/config/$(IC_NAME)/$(BOARD_NAME)
 OEM_BOOT_DIR := $(OUTPUT_DIR)/gadget
 
 # VENDOR: toolchain from BSP ; DEB: toolchain from deb
 TOOLCHAIN := DEB
-
-ARCH := arm
-KERNEL_DTS := lemaker_guitar_bbb
-KERNEL_DEFCONFIG := atm705a_s500_defconfig
-UBOOT_DEFCONFIG := s500_defconfig
 
 KERNEL_REPO := https://github.com/LeMaker/linux-actions.git
 KERNEL_BRANCH := linux-3.10.y-snappy
